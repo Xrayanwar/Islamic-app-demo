@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Islamic App Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #f9faf8;
+            color: #1f2937;
+        }
+
+        /* HERO */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            gap: 30px;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            color: #14532d;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        /* Button base */
+        .btn {
+            padding: 12px 28px;
+            background: #14532d;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1e5631;
+        }
+
+        /* Hero Image */
+        .hero-image img {
+            width: 260px;
+            border-radius: 20px;
+        }
+
+        /* FEATURES */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 30px 20px;
+            flex-grow: 1; /* mobile default */
+        }
+
+        .feature {
+            flex: 1 1 220px;
+            background: #fff;
+            padding: 20px 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .feature img {
+            width: 48px;
+            margin-bottom: 8px;
+        }
+
+        .feature h3 {
+            font-size: 18px;
+            color: #14532d;
+        }
+
+        .feature p {
+            font-size: 14px;
+        }
+
+        /* CTA */
+        .final-cta {
+            background: #14532d;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: auto; /* mobile footer bottom */
+        }
+
+        /* ===================== */
+        /* Desktop fixed layout  */
+        /* ===================== */
+        @media (min-width: 769px) {
+            .features {
+                flex-grow: 0; /* fixed height */
+            }
+
+            footer {
+                margin-top: 0;
+            }
+
+            /* Desktop button */
+            .hero .btn.download-btn,
+            .final-cta .btn.download-btn {
+                display: inline-block;
+                font-size: 16px;
+                padding: 12px 28px;
+                max-width: none;
+                margin: 0;
+            }
+        }
+
+        /* ===================== */
+        /* Mobile layout         */
+        /* ===================== */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
+                min-height: 100vh;
+            }
+
+            /* Hero section */
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px 10px;
+                gap: 8px;
+            }
+
+            .hero-content h1 { font-size: 28px; }
+            .hero-content p { font-size: 13px; margin: 6px 0; }
+            .hero-image img { width: 160px; }
+
+            /* Features */
+            .features {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                padding: 8px;
+                flex-grow: 1;
+            }
+
+            .feature { padding: 8px; }
+            .feature img { width: 32px; }
+            .feature h3 { font-size: 13px; }
+            .feature p { font-size: 11px; }
+
+            /* Final CTA */
+            .final-cta {
+                padding: 12px 8px;
+            }
+
+            .final-cta h2 { font-size: 18px; }
+            .final-cta p { font-size: 12px; }
+
+            /* Mobile buttons */
+            .hero .btn.download-btn {
+                font-size: 14px;
+                padding: 10px 20px;
+                margin-top: 8px;
+            }
+
+            .final-cta .btn.download-btn {
+                font-size: 14px;
+                padding: 10px 20px;
+                display: block;
+                margin: 12px auto 0 auto; /* centered */
+                max-width: 200px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Islamic App</h1>
+        <p>Your daily companion for Salah, Duas & Peaceful Living</p>
+        <a href="#" class="btn download-btn">Download App</a>
+    </div>
+    <div class="hero-image">
+        <img src="https://i.ibb.co/9V3JmFZ/app-mockup.png" alt="App Mockup">
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature">
+        <img src="https://i.ibb.co/3zKZQqf/prayer.png" alt="Prayer">
+        <h3>Prayer Time Alerts</h3>
+        <p>Daily Salah notifications</p>
+    </div>
+    <div class="feature">
+        <img src="https://i.ibb.co/2M7rtLq/quran.png" alt="Quran">
+        <h3>Quran Reading</h3>
+        <p>Read & listen Quran</p>
+    </div>
+    <div class="feature">
+        <img src="https://i.ibb.co/Y8vXjWx/dua.png" alt="Dua">
+        <h3>Daily Duas</h3>
+        <p>Spiritual connection</p>
+    </div>
+    <div class="feature">
+        <img src="https://i.ibb.co/0C0k1XL/qibla.png" alt="Qibla">
+        <h3>Qibla Direction</h3>
+        <p>Find Qibla easily</p>
+    </div>
+</section>
+
+<section class="final-cta">
+    <h2>Get Started Today</h2>
+    <p>Download the Islamic App and bring peace to your daily routine.</p>
+    <a href="#" class="btn download-btn">Download App Now</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 Islamic App. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
